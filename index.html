@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoWear — Prototype (Improved)</title>
+
+  <!-- External CSS (your original styles extracted to a file) -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header>
+    <div class="container bar">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="font-weight:800;font-size:18px">EcoWear</div>
+        <nav>
+          <a class="nav-btn" href="#/">Home</a>
+          <a class="nav-btn" href="#/sell">Sell</a>
+          <a class="nav-btn" href="#/rent">Rent</a>
+          <a class="nav-btn" href="#/messages">Messages</a>
+        </nav>
+      </div>
+
+      <div class="icons">
+        <!-- Wired up in app.js via these IDs -->
+        <button class="icon-btn" title="Select Country / Currency" id="btn-country" aria-label="Select Country" aria-expanded="false">🌐</button>
+        <button class="icon-btn" title="Messages" id="btn-messages" aria-label="Messages">💬</button>
+        <button class="icon-btn" title="Account" id="btn-account" aria-label="Account">👤</button>
+        <button class="icon-btn" title="Wishlist" id="btn-wishlist" aria-label="Wishlist">❤</button>
+        <button class="icon-btn" title="Settings" id="btn-settings" aria-label="Settings" aria-expanded="false">⚙️</button>
+        <button class="icon-btn" title="Cart" id="btn-cart" aria-label="Cart">🛒</button>
+        <button class="btn btn-primary" id="btn-auth">Sign up / Log in</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= App Root (SPA) ================= -->
+  <main id="app"></main>
+
+  <!-- ================= Footer ================= -->
+  <footer>
+    <div class="container section cols">
+      <div>
+        <ul class="list">
+          <li><a href="#/about">About Us</a></li>
+          <li><a href="#/faq">FAQs</a></li>
+          <li><a href="#/returns">Return and Exchange Policy</a></li>
+          <li><a href="#/privacy">Privacy Policy</a></li>
+          <li><a href="#/shipping">Shipping Policy</a></li>
+          <li><a href="#/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-weight:600;margin-bottom:8px">Join our mailing list for updates</div>
+        <div class="row">
+          <input id="newsletter" class="input" placeholder="Email Address" />
+          <!-- Calls a global function in app.js -->
+          <button class="btn btn-primary" onclick="joinNewsletter()">Join</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast (status messages) -->
+  <div id="toast" class="toast" role="status" aria-live="polite">Toast</div>
+
+  <!-- Modal container (currency, settings, auth, etc.) -->
+  <div id="overlay" class="overlay" aria-hidden="true">
+    <div class="modal" id="modal-content" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <!-- External JS (your original logic, with the 4 upgrades added) -->
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
