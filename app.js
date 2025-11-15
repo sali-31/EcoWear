@@ -29,9 +29,9 @@ function fmtMoneyUSDTo(cur, usd){
 
 /* ---------- Pricing constants ---------- */
 const RENT_DEPOSIT_USD = 1000;          // refundable deposit per rental item
-const SHIPPING_FEE_USD = 10;            // (NEW) flat shipping fee at checkout
+const SHIPPING_FEE_USD = 10;            // flat shipping fee at checkout
 
-/* ---------- Availability helpers (NEW) ---------- */
+
 /* Per-product blackout dates (ISO yyyy-mm-dd) */
 const RENTAL_BLACKOUTS = {
   "hr-bridal-24": ["2025-10-20","2025-10-22","2025-11-01"],
