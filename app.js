@@ -225,13 +225,29 @@ const CATALOG = {
   groom:[{id:"hsy-sherwani-gold",name:"HSY — Gold Sherwani",price:1400,rent:160,blurb:"Classic gold sherwani; regal, fitted silhouette.",seller:{name:"Usman",email:"usman.r@example.com"},reviews:[{name:"Hamza M.",rating:4.8,text:"Tailoring was sharp; looked premium in photos."}]},
          {id:"mnr-emerald-sherwani",name:"MNR — Emerald Sherwani",price:1300,rent:150,blurb:"Emerald brocade; ideal for barat.",seller:{name:"Bilal",email:"bilal.s@example.com"},reviews:[{name:"Faisal K.",rating:4.7,text:"Rich color; comfortable fit."}]},
          {id:"mk-suit-navy",name:"Michael Kors — Navy Suit",price:600,rent:70,blurb:"Tailored two-piece; perfect for reception.",seller:{name:"Ahmad",email:"ahmad.t@example.com"},reviews:[{name:"Rehan D.",rating:4.6,text:"Clean, crisp suit. Looked brand new."}]}],
-  bags:[{id:"bag-valentino-rockstud",name:"Valentino Garavani — Rockstud Shoulder",price:1900,rent:90,blurb:"Grain leather with signature studs.",seller:{name:"Areeba",email:"areeba.n@example.com"},reviews:[{name:"Minahil Z.",rating:4.9,text:"Perfect size for events; pristine condition."}]},
-        {id:"bag-gucci-marmont",name:"Gucci — GG Marmont Matelassé",price:1700,rent:85,blurb:"Matelassé chevron leather with GG flap.",seller:{name:"Eman",email:"eman.h@example.com"},reviews:[{name:"Komal F.",rating:4.8,text:"Soft leather, goes with everything."}]},
-        {id:"bag-chanel-classic",name:"Chanel — Classic Quilted Flap (Medium)",price:5400,rent:150,blurb:"Timeless quilt with chain strap.",seller:{name:"Anaya",email:"anaya.a@example.com"},reviews:[{name:"Haleema Q.",rating:5,text:"Iconic piece, immaculate."}]},
-        {id:"bag-lv-pochette",name:"Louis Vuitton — Pochette Métis",price:2600,rent:110,blurb:"Monogram canvas, versatile crossbody.",seller:{name:"Zunaira",email:"zunaira.m@example.com"},reviews:[{name:"Aqsa V.",rating:4.8,text:"Great everyday luxury; secure clasp."}]}],
-  heels:[{id:"heels-valentino-rockstud",name:"Valentino — Rockstud Pump 100",price:980,rent:55,blurb:"Pointed toe with signature studs.",seller:{name:"Kiran",email:"kiran.j@example.com"},reviews:[{name:"Rida S.",rating:4.7,text:"Runs a bit narrow; looks stunning."}]},
-         {id:"heels-jc-romy",name:"Jimmy Choo — Romy Glitter",price:650,rent:40,blurb:"Classic glitter pump for receptions.",seller:{name:"Misha",email:"misha.k@example.com"},reviews:[{name:"Saba Y.",rating:4.8,text:"Comfortable for hours; glitter doesn’t shed."}]},
-         {id:"heels-ysl-opa",name:"Saint Laurent — Opyum Slingback",price:995,rent:60,blurb:"YSL heel logo, sleek slingback.",seller:{name:"Mehak",email:"mehak.l@example.com"},reviews:[{name:"Anila H.",rating:4.7,text:"Elegant and stable; great grip."}]}],
+  bags:[
+    {id:"bag-valentino-rockstud",name:"Valentino Garavani — Rockstud Shoulder",price:1900,rent:90,blurb:"Grain leather with signature studs.",seller:{name:"Areeba",email:"areeba.n@example.com"},reviews:[{name:"Minahil Z.",rating:4.9,text:"Perfect size for events; pristine condition."}]},
+    {id:"bag-gucci-marmont",name:"Gucci — GG Marmont Matelassé",price:1700,rent:85,blurb:"Matelassé chevron leather with GG flap.",seller:{name:"Eman",email:"eman.h@example.com"},reviews:[{name:"Komal F.",rating:4.8,text:"Soft leather, goes with everything."}]},
+    {id:"bag-chanel-classic",name:"Chanel — Classic Quilted Flap (Medium)",price:5400,rent:150,blurb:"Timeless quilt with chain strap.",seller:{name:"Anaya",email:"anaya.a@example.com"},reviews:[{name:"Haleema Q.",rating:5,text:"Iconic piece, immaculate."}]},
+    {id:"bag-lv-pochette",name:"Louis Vuitton — Pochette Métis",price:2600,rent:110,blurb:"Monogram canvas, versatile crossbody.",seller:{name:"Zunaira",email:"zunaira.m@example.com"},reviews:[{name:"Aqsa V.",rating:4.8,text:"Great everyday luxury; secure clasp."}]},
+    {id:"bag-tory-burch-shoulder",name:"Tory Burch — Shoulder Bag",price:650,rent:45,blurb:"Polished shoulder bag that goes from daytime plans to wedding events effortlessly.",seller:{name:"Sana",email:"sana.t@example.com"},reviews:[{name:"Amna R.",rating:4.7,text:"Lightweight, fits the essentials, looks chic."}]}
+  ],
+
+  heels:[
+  {id:"heels-valentino-rockstud",name:"Valentino — Rockstud Pump 100",price:980,rent:55,blurb:"Pointed toe with signature studs.",seller:{name:"Kiran",email:"kiran.j@example.com"},reviews:[{name:"Rida S.",rating:4.7,text:"Runs a bit narrow; looks stunning."}]},
+  {id:"heels-jc-romy",name:"Jimmy Choo — Romy Glitter",price:650,rent:40,blurb:"Classic glitter pump for receptions.",seller:{name:"Misha",email:"misha.k@example.com"},reviews:[{name:"Saba Y.",rating:4.8,text:"Comfortable for hours; glitter doesn’t shed."}]},
+  {
+    id:"heels-ysl-opa",
+    name:"Saint Laurent — Opyum Slingback",
+    price:995,
+    rent:60,
+    blurb:"YSL heel logo, sleek slingback.",
+    img:"./assets/img/heels-ysl-opa-main.jpeg",
+    seller:{name:"Mehak",email:"mehak.l@example.com"},
+    reviews:[{name:"Anila H.",rating:4.7,text:"Elegant and stable; great grip."}]
+  }
+],
+
 };
 
 /* ---------- Small helpers for UI bits ---------- */
@@ -243,9 +259,15 @@ function feature(icon,title,lines){
   return `<div class="card"><div class="thumb" style="width:48px;height:48px;border-radius:999px;background:#ecfdf5;border:1px solid var(--line);">${icon}</div><div style="font-weight:600;margin:8px 0 4px">${title}</div><ul style="margin:0;padding-left:18px;color:var(--muted);font-size:14px">${lines.map(l=>`<li>${l}</li>`).join("")}</ul></div>`;
 }
 function productTile(p){
-  const cur=STATE.currency||"USD";
+  const cur = STATE.currency || "USD";
+
+  // If product has an image, show it; otherwise show the old shimmer box
+  const imgBlock = p.img
+    ? `<div class="portrait"><img src="${p.img}" alt="${SAFE(p.name)}"></div>`
+    : `<div class="portrait shimmer" aria-hidden="true"></div>`;
+
   return `<a class="card soft" href="#/product/${p.id}">
-    <div class="portrait shimmer" aria-hidden="true"></div>
+    ${imgBlock}
     <div style="margin-top:10px;font-weight:700">${p.name}</div>
     <div class="muted" style="font-size:14px">${p.blurb||""}</div>
     <div class="row" style="margin-top:8px">
@@ -255,15 +277,23 @@ function productTile(p){
   </a>`;
 }
 
+
 /* ======================= Views ======================= */
 function renderHome(){
   const heroTitle = STATE.signedIn ? "Welcome back!" : "Rent Elegance. Resell Style.";
   const showFeatures = !STATE.signedIn;
+
+  const recIds = ["heels-ysl-opa","bag-tory-burch-shoulder"];
+  const recProducts = recIds.map(id => findProduct(id)).filter(Boolean);
+
   app.innerHTML = `
     <section class="hero section">
       <div class="container center">
         <h1>${heroTitle}</h1>
-        <p class="muted" style="max-width:760px;margin:10px auto 0">A curated marketplace to rent or resell designer wedding wear, bags, and heels—luxury made accessible. High fashion, low footprint.</p>
+        <p class="muted" style="max-width:760px;margin:10px auto 0">
+          A curated marketplace to rent or resell designer wedding wear, bags, and heels—luxury made accessible.
+          High fashion, low footprint.
+        </p>
       </div>
     </section>
 
@@ -280,11 +310,16 @@ function renderHome(){
       </div>
     </section>
 
-    ${ showFeatures ? `
+    ${
+      showFeatures
+        ? `
+    <!-- Signed OUT: original features section -->
     <section class="section" style="border-top:1px solid var(--line)">
       <div class="container center">
         <h2>Designed for Every Occasion</h2>
-        <p class="muted" style="max-width:760px;margin:8px auto 0">Key features that make EcoWear inclusive, easy to use, and perfect for renting or reselling designer pieces.</p>
+        <p class="muted" style="max-width:760px;margin:8px auto 0">
+          Key features that make EcoWear inclusive, easy to use, and perfect for renting or reselling designer pieces.
+        </p>
         <div class="grid g-4" style="margin-top:16px">
           ${feature("🧵","Curated & Authentic",["Verified designers","Clear condition and honest photos"])}
           ${feature("⚡️","Simple & Intuitive",["List or rent in minutes","Clean, fast search & filters","Live availability dates"])}
@@ -292,10 +327,34 @@ function renderHome(){
           ${feature("♻️","Sustainable & Circular",["Extend garment life","High fashion, low footprint"])}
         </div>
       </div>
-    </section>` : ``}
+    </section>
+        `
+        : `
+    <!-- Signed IN: Recommended for you -->
+    <section class="section" style="border-top:1px solid var(--line)">
+      <div class="container">
+        <h2 class="center">Recommended for you</h2>
+        <p class="muted" style="max-width:760px;margin:8px auto 0;text-align:center">
+          A few pieces to start your EcoWear wishlist.
+        </p>
+        <div class="grid"
+             style="
+               grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+               gap:16px;
+               max-width:720px;
+               margin:16px auto 0;
+             ">
+          ${recProducts.map(p => productTile(p)).join("")}
+        </div>
+      </div>
+    </section>
+        `
+    }
   `;
   updateHeaderAuth();
 }
+
+
 function updateHeaderAuth(){ $("#btn-auth").textContent = STATE.signedIn ? "Sign out" : "Sign up / Log in"; }
 
 function renderCategory(slug){
@@ -859,26 +918,65 @@ route();
 updateHeaderAuth();
 
 /* ---------- Simple Sell / Rent info pages  ---------- */
-function renderSell(){ app.innerHTML = `
-  <section class="section"><div class="container">
-    <h2 style="margin:0 0 8px">List Your Designer Item</h2>
-    <p class="muted">Upload details, choose category and Men/Women section, specify sizes, and set availability for rents.</p>
-    <div class="grid g-2" style="margin-top:12px">
-      <div>
-        <input class="input" placeholder="Title" style="margin-bottom:10px">
-        <div class="grid g-2"><input class="input" placeholder="Choose Category"><input class="input" placeholder="Brand"></div>
-        <input class="input" placeholder="Price (USD)" style="margin:10px 0" inputmode="decimal">
-        <input class="input" placeholder="Size (e.g., 38 EU, M, 40R)">
+function renderSell(){
+  // 1. If user is NOT signed in → show friendly gate screen
+  if (!STATE.signedIn){
+    app.innerHTML = `
+      <section class="section">
+        <div class="container center">
+          <h2 style="margin:0 0 8px">Sell on EcoWear</h2>
+          <p class="muted" style="max-width:520px;margin:0 auto 16px">
+            Please sign in or create an account to list your designer items.
+          </p>
+          <button class="btn btn-dark" onclick="openAuth()">Sign up / Log in</button>
+          <div style="margin-top:10px">
+            <a class="pill" href="#/">← Back to Home</a>
+          </div>
+        </div>
+      </section>
+    `;
+    return;
+  }
+
+  // 2. If user IS signed in → show your existing Sell form
+  app.innerHTML = `
+    <section class="section"><div class="container">
+      <h2 style="margin:0 0 8px">List Your Designer Item</h2>
+      <p class="muted">Upload details, choose category and Men/Women section, specify sizes, and set availability for rents.</p>
+      <div class="grid g-2" style="margin-top:12px">
+        <div>
+          <input class="input" placeholder="Title" style="margin-bottom:10px">
+          <div class="grid g-2">
+            <input class="input" placeholder="Choose Category">
+            <input class="input" placeholder="Brand">
+          </div>
+          <input class="input" placeholder="Price (USD)" style="margin:10px 0" inputmode="decimal">
+          <input class="input" placeholder="Size (e.g., 38 EU, M, 40R)">
+        </div>
+        <div>
+          <div class="grid g-2">
+            <select class="input">
+              <option>Women</option>
+              <option>Men</option>
+            </select>
+            <input class="input" placeholder="Rent per day (USD)" inputmode="decimal">
+          </div>
+          <div class="grid g-2" style="margin-top:10px">
+            <input class="input" type="date" placeholder="Available from">
+            <input class="input" type="date" placeholder="Available to">
+          </div>
+          <textarea class="input" rows="5" placeholder="Description / Notes" style="margin-top:10px"></textarea>
+        </div>
       </div>
-      <div>
-        <div class="grid g-2"><select class="input"><option>Women</option><option>Men</option></select><input class="input" placeholder="Rent per day (USD)" inputmode="decimal"></div>
-        <div class="grid g-2" style="margin-top:10px"><input class="input" type="date" placeholder="Available from"><input class="input" type="date" placeholder="Available to"></div>
-        <textarea class="input" rows="5" placeholder="Description / Notes" style="margin-top:10px"></textarea>
+      <div class="hint" style="margin-top:8px">
+        Images: Upload in next step · Verification required for designer labels · Secure payments & deposits for rentals
       </div>
-    </div>
-    <div class="hint" style="margin-top:8px">Images: Upload in next step · Verification required for designer labels · Secure payments & deposits for rentals</div>
-    <div style="margin-top:12px"><button class="btn btn-primary" onclick="toast('Saved (prototype)')">Save Draft</button></div>
-  </div></section>`; }
+      <div style="margin-top:12px">
+        <button class="btn btn-primary" onclick="toast('Saved (prototype)')">Save Draft</button>
+      </div>
+    </div></section>`;
+}
+
 function renderRent(){ app.innerHTML = `
   <section class="section"><div class="container">
     <h2 style="margin:0 0 8px">How Renting Works</h2>
