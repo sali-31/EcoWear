@@ -12,7 +12,6 @@ import {
 
 // 2. Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyDyAaBtVVA5AlbjKgwwB2Vezomwr4_rIYw",
   authDomain: "ecowear-c2737.firebaseapp.com",
   projectId: "ecowear-c2737",
   storageBucket: "ecowear-c2737.firebasestorage.app",
