@@ -1,5 +1,3 @@
-
-
 const $ = sel => document.querySelector(sel);
 const app = $("#app");
 const overlay = $("#overlay");
@@ -226,26 +224,123 @@ const CATALOG = {
          {id:"mnr-emerald-sherwani",name:"MNR — Emerald Sherwani",price:1300,rent:150,blurb:"Emerald brocade; ideal for barat.",seller:{name:"Bilal",email:"bilal.s@example.com"},reviews:[{name:"Faisal K.",rating:4.7,text:"Rich color; comfortable fit."}]},
          {id:"mk-suit-navy",name:"Michael Kors — Navy Suit",price:600,rent:70,blurb:"Tailored two-piece; perfect for reception.",seller:{name:"Ahmad",email:"ahmad.t@example.com"},reviews:[{name:"Rehan D.",rating:4.6,text:"Clean, crisp suit. Looked brand new."}]}],
   bags:[
-    {id:"bag-valentino-rockstud",name:"Valentino Garavani — Rockstud Shoulder",price:1900,rent:90,blurb:"Grain leather with signature studs.",seller:{name:"Areeba",email:"areeba.n@example.com"},reviews:[{name:"Minahil Z.",rating:4.9,text:"Perfect size for events; pristine condition."}]},
-    {id:"bag-gucci-marmont",name:"Gucci — GG Marmont Matelassé",price:1700,rent:85,blurb:"Matelassé chevron leather with GG flap.",seller:{name:"Eman",email:"eman.h@example.com"},reviews:[{name:"Komal F.",rating:4.8,text:"Soft leather, goes with everything."}]},
-    {id:"bag-chanel-classic",name:"Chanel — Classic Quilted Flap (Medium)",price:5400,rent:150,blurb:"Timeless quilt with chain strap.",seller:{name:"Anaya",email:"anaya.a@example.com"},reviews:[{name:"Haleema Q.",rating:5,text:"Iconic piece, immaculate."}]},
-    {id:"bag-lv-pochette",name:"Louis Vuitton — Pochette Métis",price:2600,rent:110,blurb:"Monogram canvas, versatile crossbody.",seller:{name:"Zunaira",email:"zunaira.m@example.com"},reviews:[{name:"Aqsa V.",rating:4.8,text:"Great everyday luxury; secure clasp."}]},
-    {id:"bag-tory-burch-shoulder",name:"Tory Burch — Shoulder Bag",price:650,rent:45,blurb:"Polished shoulder bag that goes from daytime plans to wedding events effortlessly.",seller:{name:"Sana",email:"sana.t@example.com"},reviews:[{name:"Amna R.",rating:4.7,text:"Lightweight, fits the essentials, looks chic."}]}
+    {
+  id:"bag-valentino-rockstud",
+  name:"Valentino Garavani — Rockstud Shoulder",
+  price:1900,
+  rent:90,
+  blurb:"Grain leather with signature studs.",
+
+  // NEW: images for tile + product gallery
+  img:"./assets/img/bag-valentino-main.jpeg",
+  gallery:[
+    "./assets/img/bag-valentino-main.jpeg",   // main + first thumbnail
+    "./assets/img/bag-valentino-side1.jpeg",  // second thumbnail
+    "./assets/img/bag-valentino-side2.jpeg"   // third thumbnail
+  ],
+
+  seller:{name:"Areeba",email:"areeba.n@example.com"},
+  reviews:[{name:"Minahil Z.",rating:4.9,text:"Perfect size for events; pristine condition."}]
+},
+
+    {
+  id:"bag-gucci-marmont",
+  name:"Gucci — GG Marmont Matelassé",
+  price:1700,
+  rent:85,
+  blurb:"Matelassé chevron leather with GG flap.",
+
+  // NEW: images for tile + product gallery
+  img:"./assets/img/bag-gucci-main.jpeg",
+  gallery:[
+    "./assets/img/bag-gucci-main.jpeg",   // main + first thumbnail
+    "./assets/img/bag-gucci-side1.jpeg",  // second thumbnail
+    "./assets/img/bag-gucci-side2.jpeg"   // third thumbnail
+  ],
+
+  seller:{name:"Eman",email:"eman.h@example.com"},
+  reviews:[{name:"Komal F.",rating:4.8,text:"Soft leather, goes with everything."}]
+},
+
+    {
+  id:"bag-chanel-classic",
+  name:"Chanel — Classic Quilted Flap (Medium)",
+  price:5400,
+  rent:150,
+  blurb:"Timeless quilt with chain strap.",
+
+  // NEW: images for tile + product gallery
+  img:"./assets/img/bag-chanel-main.jpeg",
+  gallery:[
+    "./assets/img/bag-chanel-main.jpeg",   // main + first thumbnail
+    "./assets/img/bag-chanel-side1.jpeg",  // second thumbnail
+    "./assets/img/bag-chanel-side2.jpeg"   // third thumbnail
+  ],
+
+  seller:{name:"Anaya",email:"anaya.a@example.com"},
+  reviews:[{name:"Haleema Q.",rating:5,text:"Iconic piece, immaculate."}]
+},
+
+    {
+  id:"bag-lv-pochette",
+  name:"Louis Vuitton — Pochette Métis",
+  price:2600,
+  rent:110,
+  blurb:"Monogram canvas, versatile crossbody.",
+
+  // NEW: images for tile + product gallery
+  img:"./assets/img/bag-lv-main.jpeg",
+  gallery:[
+    "./assets/img/bag-lv-main.jpeg",   // main + first thumbnail
+    "./assets/img/bag-lv-side1.jpeg",  // second thumbnail
+    "./assets/img/bag-lv-side2.jpeg"   // third thumbnail
+  ],
+
+  seller:{name:"Zunaira",email:"zunaira.m@example.com"},
+  reviews:[{name:"Aqsa V.",rating:4.8,text:"Great everyday luxury; secure clasp."}]
+},
+
+    {
+  id:"bag-tory-burch-shoulder",
+  name:"Tory Burch — Shoulder Bag",
+  price:650,
+  rent:45,
+  blurb:"Polished shoulder bag that goes from daytime plans to wedding events effortlessly.",
+
+  // NEW: images
+  img:"./assets/img/bag-tory-main.jpeg",
+  gallery:[
+    "./assets/img/bag-tory-main.jpeg",   // main + first thumbnail
+    "./assets/img/bag-tory-side1.jpeg",  // second thumbnail
+    "./assets/img/bag-tory-side2.jpeg"   // third thumbnail
+  ],
+
+  seller:{name:"Sana",email:"sana.t@example.com"},
+  reviews:[{name:"Amna R.",rating:4.7,text:"Lightweight, fits the essentials, looks chic."}]
+}
+
+
   ],
 
   heels:[
   {id:"heels-valentino-rockstud",name:"Valentino — Rockstud Pump 100",price:980,rent:55,blurb:"Pointed toe with signature studs.",seller:{name:"Kiran",email:"kiran.j@example.com"},reviews:[{name:"Rida S.",rating:4.7,text:"Runs a bit narrow; looks stunning."}]},
   {id:"heels-jc-romy",name:"Jimmy Choo — Romy Glitter",price:650,rent:40,blurb:"Classic glitter pump for receptions.",seller:{name:"Misha",email:"misha.k@example.com"},reviews:[{name:"Saba Y.",rating:4.8,text:"Comfortable for hours; glitter doesn’t shed."}]},
   {
-    id:"heels-ysl-opa",
-    name:"Saint Laurent — Opyum Slingback",
-    price:995,
-    rent:60,
-    blurb:"YSL heel logo, sleek slingback.",
-    img:"./assets/img/heels-ysl-opa-main.jpeg",
-    seller:{name:"Mehak",email:"mehak.l@example.com"},
-    reviews:[{name:"Anila H.",rating:4.7,text:"Elegant and stable; great grip."}]
-  }
+  id:"heels-ysl-opa",
+  name:"Saint Laurent — Opyum Slingback",
+  price:995,
+  rent:60,
+  blurb:"YSL heel logo, sleek slingback.",
+  img:"./assets/img/heels-ysl-opa-main.jpeg",  // main image
+  gallery:[
+    "./assets/img/heels-ysl-opa-main.jpeg",    // 1st (main)
+    "./assets/img/heels-ysl-opa-side1.jpeg",   // 2nd
+    "./assets/img/heels-ysl-opa-side2.jpeg"    // 3rd
+  ],
+  seller:{name:"Mehak",email:"mehak.l@example.com"},
+  reviews:[{name:"Anila H.",rating:4.7,text:"Elegant and stable; great grip."}]
+}
+
 ],
 
 };
@@ -386,14 +481,41 @@ function renderProduct(id){
   const wished = STATE.wishlist.includes(id);
   const blackouts = RENTAL_BLACKOUTS[id] || [];
 
+    // Choose main image (prefer gallery[0], fall back to img)
+  const mainSrc = (product.gallery && product.gallery.length)
+    ? product.gallery[0]
+    : product.img;
+
+  const mainImage = mainSrc
+    ? `<div class="portrait" style="flex:1;min-height:460px">
+         <img src="${mainSrc}" alt="${SAFE(product.name)}">
+       </div>`
+    : `<div class="portrait shimmer" style="flex:1;min-height:460px"
+         aria-label="Product image placeholder"></div>`;
+
+  // Thumbnails on the left – up to 3 images from gallery
+  const thumbsHTML = (product.gallery && product.gallery.length)
+    ? product.gallery.slice(0,3).map(src => `
+        <div class="thumb">
+          <img src="${src}" alt="${SAFE(product.name)} view">
+        </div>
+      `).join("")
+    : [1,2,3].map(i =>
+        `<div class="thumb shimmer" aria-hidden="true"></div>`
+      ).join("");
+
+
   app.innerHTML = `
     <section class="section"><div class="container grid g-2" style="align-items:start">
-      <div>
+            <div>
         <div class="row">
-          <div class="grid" style="gap:10px">${[1,2,3,4,5].map(i=>`<div class="thumb shimmer" aria-hidden="true"></div>`).join("")}</div>
-          <div class="portrait shimmer" style="flex:1;min-height:460px" aria-label="Product image placeholder"></div>
+          <div class="grid" style="gap:10px">
+            ${thumbsHTML}
+          </div>
+          ${mainImage}
         </div>
       </div>
+
       <div>
         <h1 style="margin:0">${product.name}</h1>
         <div style="margin-top:6px;color:var(--emerald);font-weight:700;font-size:20px">${fmtMoneyUSDTo(cur, product.price)}</div>
