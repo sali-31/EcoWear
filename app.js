@@ -1,3 +1,5 @@
+
+
 const $ = sel => document.querySelector(sel);
 const app = $("#app");
 const overlay = $("#overlay");
@@ -214,15 +216,190 @@ function joinNewsletter(){
 
 /* ---------- Catalog data  ---------- */
 const CATALOG = {
-  bridal:[{id:"hr-bridal-24",name:"Hussain Rehar — Bridal Couture ’24",price:2500,rent:250,blurb:"Iconic fuchsia bridal set, worn twice, perfect condition.",seller:{name:"Fatima",email:"fatimaahmed27@gmail.com"},reviews:[{name:"Sara M.",rating:5,text:"Looked exactly like the listing. Fit guidance was spot on and it sparkled in photos."},{name:"Aiman K.",rating:5,text:"Arrived early and carefully packed. Deposit returned the next morning."}]},
-          {id:"elan-ivory-bridal",name:"Élan — Ivory Crystal Bridal",price:3000,rent:300,blurb:"Ivory hand-embellished lehenga with crystal work; mint dupatta.",seller:{name:"Mahnoor",email:"mahnoor.s@example.com"},reviews:[{name:"Zoya R.",rating:4.8,text:"Gorgeous crystal work, very light to wear."},{name:"Hira S.",rating:5,text:"So elegant—tons of compliments!"}]},
-          {id:"sana-red-classic",name:"Sana Safinaz — Classic Red Bridal",price:2200,rent:220,blurb:"Classic red with antique zardozi; lightweight skirt, rich look.",seller:{name:"Noor",email:"noor.aziz@example.com"},reviews:[{name:"Ayesha T.",rating:4.9,text:"Deep red & antique gold photographed beautifully."}]}],
-  traditional:[{id:"nomi-mehndi",name:"Nomi Ansari — Mehndi Lehenga",price:1200,rent:130,blurb:"Vibrant multi-color lehenga, perfect for mehndi.",seller:{name:"Laiba",email:"laiba.k@example.com"},reviews:[{name:"Anum J.",rating:4.8,text:"Colors pop under lights; twirls beautifully."}]},
-              {id:"faiza-pastel",name:"Faiza Saqlain — Pastel Pishwas",price:950,rent:110,blurb:"Pastel pishwas with handwork; dreamy twirl.",seller:{name:"Hiba",email:"hiba.b@example.com"},reviews:[{name:"Sidra P.",rating:4.7,text:"Very flattering silhouette; lots of compliments."}]},
-              {id:"mariab-tea-pink",name:"Maria B — Tea Pink Formal",price:800,rent:95,blurb:"Tea pink net with pearls; great for dholki/engagement.",seller:{name:"Iqra",email:"iqra.q@example.com"},reviews:[{name:"Nimra S.",rating:4.6,text:"Exactly as described; easy to wear."}]}],
-  groom:[{id:"hsy-sherwani-gold",name:"HSY — Gold Sherwani",price:1400,rent:160,blurb:"Classic gold sherwani; regal, fitted silhouette.",seller:{name:"Usman",email:"usman.r@example.com"},reviews:[{name:"Hamza M.",rating:4.8,text:"Tailoring was sharp; looked premium in photos."}]},
-         {id:"mnr-emerald-sherwani",name:"MNR — Emerald Sherwani",price:1300,rent:150,blurb:"Emerald brocade; ideal for barat.",seller:{name:"Bilal",email:"bilal.s@example.com"},reviews:[{name:"Faisal K.",rating:4.7,text:"Rich color; comfortable fit."}]},
-         {id:"mk-suit-navy",name:"Michael Kors — Navy Suit",price:600,rent:70,blurb:"Tailored two-piece; perfect for reception.",seller:{name:"Ahmad",email:"ahmad.t@example.com"},reviews:[{name:"Rehan D.",rating:4.6,text:"Clean, crisp suit. Looked brand new."}]}],
+  bridal:[{
+      id:"hr-bridal-24",
+      name:"Hussain Rehar — Bridal Couture ’24",
+      price:2500,
+      rent:250,
+      blurb:"Iconic fuchsia bridal set, worn twice, perfect condition.",
+
+      // NEW: images
+      img:"./assets/img/bridal-hr-main.jpeg",
+      gallery:[
+        "./assets/img/bridal-hr-main.jpeg",   // main + large image
+        "./assets/img/bridal-hr-side1.jpeg",  // 2nd thumbnail
+        "./assets/img/bridal-hr-side2.jpeg"   // 3rd thumbnail
+      ],
+
+      seller:{name:"Fatima",email:"fatimaahmed27@gmail.com"},
+      reviews:[
+        {name:"Sara M.",rating:5,text:"Looked exactly like the listing. Fit guidance was spot on and it sparkled in photos."},
+        {name:"Aiman K.",rating:5,text:"Arrived early and carefully packed. Deposit returned the next morning."}
+      ]
+    },
+          {
+  id:"elan-ivory-bridal",
+  name:"Élan — Ivory Crystal Bridal",
+  price:3000,
+  rent:300,
+  blurb:"Ivory hand-embellished lehenga with crystal work; mint dupatta.",
+
+  // NEW: images
+  img:"./assets/img/bridal-elan-main.jpeg",
+  gallery:[
+    "./assets/img/bridal-elan-main.jpeg",   // main + large image
+    "./assets/img/bridal-elan-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/bridal-elan-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Mahnoor",email:"mahnoor.s@example.com"},
+  reviews:[
+    {name:"Zoya R.",rating:4.8,text:"Gorgeous crystal work, very light to wear."},
+    {name:"Hira S.",rating:5,text:"So elegant—tons of compliments!"}
+  ]
+},
+
+          {
+  id:"sana-red-classic",
+  name:"Sana Safinaz — Classic Red Bridal",
+  price:2200,
+  rent:220,
+  blurb:"Classic red with antique zardozi; lightweight skirt, rich look.",
+
+  // NEW: images
+  img:"./assets/img/bridal-sana-main.jpeg",
+  gallery:[
+    "./assets/img/bridal-sana-main.jpeg",   // main + large image
+    "./assets/img/bridal-sana-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/bridal-sana-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Noor",email:"noor.aziz@example.com"},
+  reviews:[
+    {name:"Ayesha T.",rating:4.9,text:"Deep red & antique gold photographed beautifully."}
+  ]
+},
+],
+  traditional:[{
+  id:"nomi-mehndi",
+  name:"Nomi Ansari — Mehndi Lehenga",
+  price:1200,
+  rent:130,
+  blurb:"Vibrant multi-color lehenga, perfect for mehndi.",
+
+  // NEW: images
+  img:"./assets/img/traditional-nomi-main.jpeg",
+  gallery:[
+    "./assets/img/traditional-nomi-main.jpeg",   // main + large image
+    "./assets/img/traditional-nomi-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/traditional-nomi-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Laiba",email:"laiba.k@example.com"},
+  reviews:[
+    {name:"Anum J.",rating:4.8,text:"Colors pop under lights; twirls beautifully."}
+  ]
+},
+
+              {
+  id:"faiza-pastel",
+  name:"Faiza Saqlain — Pastel Pishwas",
+  price:950,
+  rent:110,
+  blurb:"Pastel pishwas with handwork; dreamy twirl.",
+
+  // NEW: images
+  img:"./assets/img/traditional-faiza-main.jpeg",
+  gallery:[
+    "./assets/img/traditional-faiza-main.jpeg",   // main + large image
+    "./assets/img/traditional-faiza-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/traditional-faiza-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Hiba",email:"hiba.b@example.com"},
+  reviews:[
+    {name:"Sidra P.",rating:4.7,text:"Very flattering silhouette; lots of compliments."}
+  ]
+},
+
+              {
+  id:"mariab-tea-pink",
+  name:"Maria B — Tea Pink Formal",
+  price:800,
+  rent:95,
+  blurb:"Tea pink net with pearls; great for dholki/engagement.",
+
+  // NEW: images
+  img:"./assets/img/traditional-mariab-main.jpeg",
+  gallery:[
+    "./assets/img/traditional-mariab-main.jpeg",   // main + large image
+    "./assets/img/traditional-mariab-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/traditional-mariab-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Iqra",email:"iqra.q@example.com"},
+  reviews:[
+    {name:"Nimra S.",rating:4.6,text:"Exactly as described; easy to wear."}
+  ]
+},
+],
+  groom:[{
+  id:"hsy-sherwani-gold",
+  name:"HSY — Gold Sherwani",
+  price:1400,
+  rent:160,
+  blurb:"Classic gold sherwani; regal, fitted silhouette.",
+
+  // NEW: images
+  img:"./assets/img/groom-hsy-main.jpeg",
+  gallery:[
+    "./assets/img/groom-hsy-main.jpeg",   // main + large image
+    "./assets/img/groom-hsy-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/groom-hsy-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Usman",email:"usman.r@example.com"},
+  reviews:[{name:"Hamza M.",rating:4.8,text:"Tailoring was sharp; looked premium in photos."}]
+},
+
+         {
+  id:"mnr-emerald-sherwani",
+  name:"MNR — Emerald Sherwani",
+  price:1300,
+  rent:150,
+  blurb:"Emerald brocade; ideal for barat.",
+
+  // NEW: images
+  img:"./assets/img/groom-mnr-main.jpeg",
+  gallery:[
+    "./assets/img/groom-mnr-main.jpeg",   // main + large image
+    "./assets/img/groom-mnr-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/groom-mnr-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Bilal",email:"bilal.s@example.com"},
+  reviews:[{name:"Faisal K.",rating:4.7,text:"Rich color; comfortable fit."}]
+},
+
+         {
+  id:"mk-suit-navy",
+  name:"Michael Kors — Navy Suit",
+  price:600,
+  rent:70,
+  blurb:"Tailored two-piece; perfect for reception.",
+
+  // NEW: images
+  img:"./assets/img/groom-mk-main.jpeg",
+  gallery:[
+    "./assets/img/groom-mk-main.jpeg",   // main + large image
+    "./assets/img/groom-mk-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/groom-mk-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Ahmad",email:"ahmad.t@example.com"},
+  reviews:[{name:"Rehan D.",rating:4.6,text:"Clean, crisp suit. Looked brand new."}]
+},
+],
   bags:[
     {
   id:"bag-valentino-rockstud",
@@ -323,8 +500,44 @@ const CATALOG = {
   ],
 
   heels:[
-  {id:"heels-valentino-rockstud",name:"Valentino — Rockstud Pump 100",price:980,rent:55,blurb:"Pointed toe with signature studs.",seller:{name:"Kiran",email:"kiran.j@example.com"},reviews:[{name:"Rida S.",rating:4.7,text:"Runs a bit narrow; looks stunning."}]},
-  {id:"heels-jc-romy",name:"Jimmy Choo — Romy Glitter",price:650,rent:40,blurb:"Classic glitter pump for receptions.",seller:{name:"Misha",email:"misha.k@example.com"},reviews:[{name:"Saba Y.",rating:4.8,text:"Comfortable for hours; glitter doesn’t shed."}]},
+  {
+  id:"heels-valentino-rockstud",
+  name:"Valentino — Rockstud Pump 100",
+  price:980,
+  rent:55,
+  blurb:"Pointed toe with signature studs.",
+
+  // NEW: images
+  img:"./assets/img/heels-valentino-main.jpeg",
+  gallery:[
+    "./assets/img/heels-valentino-main.jpeg",   // main + large image
+    "./assets/img/heels-valentino-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/heels-valentino-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Kiran",email:"kiran.j@example.com"},
+  reviews:[{name:"Rida S.",rating:4.7,text:"Runs a bit narrow; looks stunning."}]
+},
+
+  {
+  id:"heels-jc-romy",
+  name:"Jimmy Choo — Romy Glitter",
+  price:650,
+  rent:40,
+  blurb:"Classic glitter pump for receptions.",
+
+  // NEW: images
+  img:"./assets/img/heels-jc-main.jpeg",
+  gallery:[
+    "./assets/img/heels-jc-main.jpeg",   // main + large image
+    "./assets/img/heels-jc-side1.jpeg",  // 2nd thumbnail
+    "./assets/img/heels-jc-side2.jpeg"   // 3rd thumbnail
+  ],
+
+  seller:{name:"Misha",email:"misha.k@example.com"},
+  reviews:[{name:"Saba Y.",rating:4.8,text:"Comfortable for hours; glitter doesn’t shed."}]
+},
+
   {
   id:"heels-ysl-opa",
   name:"Saint Laurent — Opyum Slingback",
